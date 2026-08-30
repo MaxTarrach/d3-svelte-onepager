@@ -1,7 +1,6 @@
 # D3 + Svelte one-page template
 
-A single scrolling page, one chart per section — modeled loosely on
-[pacific-challenge](https://holtzy.github.io/pacific-challenge/).
+A single scrolling page, one chart per section.
 
 ## Run it
 
