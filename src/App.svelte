@@ -99,9 +99,7 @@ That grid still runs largely on fuel arriving by tanker, and the visitors drawn 
     title="GHG Emissions Per Capita"
   >
     <span slot="deck">
-      17 territories, 1970&ndash;2024 (SPC Climate Change Indicators). The four
-      largest 2024 emitters get a fixed color and end label; the rest render
-      muted — hover any line, featured or not, to trace its country and value.
+      Palau sits in a band of its own, emitting several times more greenhouse gas per resident than any other Pacific territory: the arithmetic of a diesel grid serving nine visitors for every person counted in the denominator.
     </span>
     <LineChart data={lineData} />
     <span slot="citation">
