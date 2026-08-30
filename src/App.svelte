@@ -30,22 +30,58 @@
     progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
   }
 
+  const navItems = [
+    { id: "visitors", label: "Why visitors come to Palau" },
+    { id: "origins", label: "East Asia drives Palau's tourism" },
+    { id: "scale", label: "Tourists outnumber locals" },
+    { id: "guess", label: "How green is the energy mix?" },
+    { id: "emissions", label: "GHG emissions per capita" },
+    { id: "transition", label: "Palau's path off fossil fuels" },
+  ];
+
+  let activeId = null;
+
   onMount(() => {
     updateProgress();
     window.addEventListener("scroll", updateProgress, { passive: true });
     window.addEventListener("resize", updateProgress);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) activeId = entry.target.id;
+        }
+      },
+      { rootMargin: "-45% 0px -50% 0px" }
+    );
+    navItems.forEach(({ id }) => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
     return () => {
       window.removeEventListener("scroll", updateProgress);
       window.removeEventListener("resize", updateProgress);
+      observer.disconnect();
     };
   });
 </script>
 
 <div class="progress-bar" style="width: {progress}%" role="presentation" />
 
+<nav class="side-nav" aria-label="Page sections">
+  <ul>
+    {#each navItems as item (item.id)}
+      <li>
+        <a href="#{item.id}" class:active={activeId === item.id}>{item.label}</a>
+      </li>
+    {/each}
+  </ul>
+</nav>
+
 <header class="page-header">
   <div class="header-inner">
-    <p class="brand">Overtourism in Palau</p>
+    <p class="brand">Overtourism in Palau - From Dependence to future pioneer</p>
   </div>
 </header>
 
@@ -60,7 +96,7 @@
 That grid still runs largely on fuel arriving by tanker, and the visitors drawn by Palau's environmental reputation are the ones drawing hardest on it. Air-conditioned rooms, desalinated water, and dive boat compressors all trace back to the same imported barrel. As arrivals climb back toward pre-pandemic levels, this piece looks at where Palau stands today: how much energy tourism consumes, where it comes from, and how far the country still is from the sustainability it sells.
   </TextPlaceholder>
 
-  <Section eyebrow="Composition" title="Why Visitors Come To Palau">
+  <Section id="visitors" eyebrow="Composition" title="Why Visitors Come To Palau">
     <span slot="deck">
       Nine in ten arrivals are on vacation: diving, snorkeling, and the
       Rock Islands. The rest split between military-related visits and
@@ -73,6 +109,7 @@ That grid still runs largely on fuel arriving by tanker, and the visitors drawn 
   </Section>
 
   <Section
+    id="origins"
     eyebrow="Origins of tourists"
     title="East Asia Drives Palau's Island Tourism"
   >
@@ -86,7 +123,7 @@ That grid still runs largely on fuel arriving by tanker, and the visitors drawn 
     </span>
   </Section>
 
-  <Section eyebrow="Comparison" title="A Pristine Paradise Where Tourists Outnumber The Remaning Locals">
+  <Section id="scale" eyebrow="Comparison" title="A Pristine Paradise Where Tourists Outnumber The Remaning Locals">
     <span slot="deck">
       Seventeen figures stand for everyone who lives in Palau. A hundred and sixty stand for the people who arrived in a single year. The two symbols are deliberately the same height, on the same baseline, differing only by a mask, a snorkel and a pair of fins, because a visitor is not a smaller or larger kind of person, only a temporary one. What changes is the count. Nine visitors for every resident, all drawing on the same reefs, the same water, the same imported fuel.
     </span>
@@ -101,7 +138,7 @@ That grid still runs largely on fuel arriving by tanker, and the visitors drawn 
     </span>
   </Section>
 
-  <Section eyebrow="" title="How Green Is Palau's Energy Mix?">
+  <Section id="guess" eyebrow="" title="How Green Is Palau's Energy Mix?">
     <span slot="deck">
       Before you scroll on: what share of Palau's electricity do you think comes from renewables? Take a guess.
     </span>
@@ -115,6 +152,7 @@ That grid still runs largely on fuel arriving by tanker, and the visitors drawn 
   </Section>
 
   <Section
+    id="emissions"
     eyebrow="A Pacific Outlier"
     title="GHG Emissions Per Capita"
   >
@@ -127,7 +165,7 @@ That grid still runs largely on fuel arriving by tanker, and the visitors drawn 
     </span>
   </Section>
 
-  <Section eyebrow="Future Projection" title="Palau's Path Off Fossil Fuels">
+  <Section id="transition" eyebrow="Future Projection" title="Palau's Path Off Fossil Fuels">
     <span slot="deck">
       Non-renewable energy consumption, 2000&ndash;2050, in terajoules. Each
       ring is one year: 2000 draws a nearly full circle of fossil
@@ -163,6 +201,52 @@ That legibility is the export. Palau has already been early on things the rest o
     height: 3px;
     background: var(--magenta);
     z-index: 20;
+  }
+
+  .side-nav {
+    display: none;
+  }
+
+  @media (min-width: 1180px) {
+    .side-nav {
+      display: block;
+      position: fixed;
+      top: 50%;
+      right: 2.5rem;
+      transform: translateY(-50%);
+      z-index: 15;
+      max-width: 190px;
+    }
+  }
+
+  .side-nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+
+  .side-nav a {
+    display: block;
+    font-size: var(--t-label);
+    line-height: 1.35;
+    color: var(--s-300);
+    text-decoration: none;
+    border-left: 2px solid var(--s-200);
+    padding-left: 0.75rem;
+    transition: color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .side-nav a:hover {
+    color: var(--ink-muted);
+  }
+
+  .side-nav a.active {
+    color: var(--magenta);
+    border-left-color: var(--magenta);
+    font-weight: 600;
   }
 
   .page-header {

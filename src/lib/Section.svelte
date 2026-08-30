@@ -1,13 +1,14 @@
 <script>
   export let eyebrow = "";
   export let title = "";
+  export let id = undefined;
 </script>
 
 <!--
   One page = one <Section> per chart, stacked vertically. Drop this file
   around any chart component to get consistent spacing, heading, and copy.
 -->
-<section class="section">
+<section class="section" {id}>
   <div class="section-head">
     {#if eyebrow}<p class="eyebrow">{eyebrow}</p>{/if}
     <h2>{title}</h2>
