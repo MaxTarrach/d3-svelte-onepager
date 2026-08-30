@@ -100,6 +100,10 @@
   </ul>
 </div>
 
+<p class="detail" aria-live="polite">
+  {hovered !== null ? data[hovered].detail ?? "" : ""}
+</p>
+
 <style>
   .wrap {
     display: flex;
@@ -174,5 +178,13 @@
     font-variant-numeric: tabular-nums lining-nums;
     color: var(--ink);
     font-weight: 600;
+  }
+
+  .detail {
+    margin: 1rem 0 0;
+    min-height: 1.2em;
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+    line-height: 1.4;
   }
 </style>

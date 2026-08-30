@@ -85,13 +85,26 @@ export const scatterData = ["Group A", "Group B", "Group C"].flatMap(
 );
 
 // DonutChart: categorical composition, ideally <= 6 slices before folding to "Other".
-// shape: { label: string, value: number }[]
+// shape: { label: string, value: number, detail?: string }[]
+// Visitor purpose of travel to Palau. Source: Island Times
+// (https://islandtimes.org/palau-closes-2025-strong-january-2026-arrivals-jump-13-as-japan-and-australia-surge/),
+// based on entry and border data statistics.
 export const donutData = [
-  { label: "Direct", value: 38 },
-  { label: "Search", value: 27 },
-  { label: "Social", value: 16 },
-  { label: "Referral", value: 11 },
-  { label: "Email", value: 8 },
+  {
+    label: "Leisure / Vacation",
+    value: 92.4,
+    detail: "Scuba diving, snorkeling, Rock Islands sightseeing, marine life, eco-tourism",
+  },
+  {
+    label: "Military-Related",
+    value: 4.5,
+    detail: "Official military visits, regional defense cooperation, and historical WWII wreck site tours",
+  },
+  {
+    label: "Visiting Friends & Relatives",
+    value: 3.1,
+    detail: "Family reunions, community ties, and local resident hosting",
+  },
 ];
 
 // MovementMap: visitor arrivals in Palau by source market, CY2015.

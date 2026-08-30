@@ -24,12 +24,8 @@
 </script>
 
 <div class="quiz">
-  <p class="prompt">
-    What share of Palau's total final energy consumption came from
-    <strong>renewable sources</strong> in {answerYear}? Slide to your guess,
-    then check it.
-  </p>
 
+  
   <div class="control">
     <input
       class="slider"

@@ -123,18 +123,6 @@
       : null;
 </script>
 
-{#if featuredSeries.length > 0}
-  <p class="caption">
-    {#each featuredSeries as s}<span class="caption-name" style="color: {colorOf(s)}"
-      >{s.series}</span
-    >{/each} led 2024 per-capita emissions &mdash; each line is labeled in its
-    own color, so there is nothing else to decode.
-    {#if mutedCount > 0}
-      {mutedCount} further territories sit in gray; hover any line to read it.
-    {/if}
-  </p>
-{/if}
-
 <div class="chart" bind:clientWidth={width}>
   <svg
     {width}

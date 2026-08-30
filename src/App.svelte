@@ -40,12 +40,16 @@
 That grid still runs largely on fuel arriving by tanker, and the visitors drawn by Palau's environmental reputation are the ones drawing hardest on it. Air-conditioned rooms, desalinated water, and dive boat compressors all trace back to the same imported barrel. As arrivals climb back toward pre-pandemic levels, this piece looks at where Palau stands today: how much energy tourism consumes, where it comes from, and how far the country still is from the sustainability it sells.
   </TextPlaceholder>
 
-  <Section eyebrow="Composition" title="Traffic by channel">
+  <Section eyebrow="Composition" title="Why Visitors Come To Palau">
     <span slot="deck">
-      A donut shows part-to-whole composition. Larger slices carry a direct
-      percentage label; smaller ones fall back to the legend.
+      Nine in ten arrivals are on vacation: diving, snorkeling, and the
+      Rock Islands. The rest split between military-related visits and
+      residents' friends and family.
     </span>
     <DonutChart data={donutData} />
+    <span slot="citation">
+      Source: <a href="https://islandtimes.org/palau-closes-2025-strong-january-2026-arrivals-jump-13-as-japan-and-australia-surge/" target="_blank" rel="noopener">Island Times, "Palau Closes 2025 Strong; January 2026 Arrivals Jump 13% as Japan and Australia Surge"</a>
+    </span>
   </Section>
 
   <Section
@@ -56,6 +60,10 @@ That grid still runs largely on fuel arriving by tanker, and the visitors drawn 
       Palau's tourism is an East Asian story. China, Japan, Taiwan and South Korea account for roughly nine in ten arrivals, with China alone supplying more than half. Everything else is small by comparison: the US and Canada together, then Europe, then Australia at under 1%. A visitor economy resting this heavily on one source market inherits that market's politics, currency and flight schedules and so does Palau's grid.
     </span>
     <MovementMap data={movementData} destination={palau} />
+    <span slot="citation">
+      Source: <a href="https://stats.pacificdata.org/vis?lc=en&df[ds]=SPC2&df[id]=DF_CLIMATE_CHANGE&df[ag]=SPC&df[vs]=1.0&av=true&dq=A.TRSM_ARR.&pd=,&to[TIME_PERIOD]=false" target="_blank" rel="noopener">SPC Pacific Data Hub, Climate Change Indicators — international visitor arrivals (TRSM_ARR)</a>;
+      <a href="https://www.palaugov.pw/executive-branch/ministries/finance/budgetandplanning/immigration-tourism-statistics/" target="_blank" rel="noopener">Palau Bureau of Budget & Planning, Immigration & Tourism Statistics</a>
+    </span>
   </Section>
 
   <Section eyebrow="Comparison" title="A Pristine Paradise Where Tourists Outnumber The Remaning Locals">
@@ -67,26 +75,28 @@ That grid still runs largely on fuel arriving by tanker, and the visitors drawn 
       visitorTotal={isotypeVisitorTotal}
       unit={isotypeUnit}
     />
+    <span slot="citation">
+      Source: <a href="https://stats.pacificdata.org/vis?lc=en&df[ds]=SPC2&df[id]=DF_CLIMATE_CHANGE&df[ag]=SPC&df[vs]=1.0&av=true&dq=A.TRSM_ARR.&pd=,&to[TIME_PERIOD]=false" target="_blank" rel="noopener">SPC Pacific Data Hub, Climate Change Indicators — international visitor arrivals (TRSM_ARR)</a>;
+      <a href="https://www.palaugov.pw/executive-branch/ministries/finance/budgetandplanning/immigration-tourism-statistics/" target="_blank" rel="noopener">Palau Bureau of Budget & Planning, Immigration & Tourism Statistics</a>
+    </span>
   </Section>
 
-  <TextPlaceholder eyebrow="Energy">
-    Placeholder text — replace with copy on where Palau's energy comes from.
-  </TextPlaceholder>
-
-  <Section eyebrow="Guess" title="How green is Palau's energy mix?">
+  <Section eyebrow="" title="How Green Is Palau's Energy Mix?">
     <span slot="deck">
-      SDG indicator 7.2.1, renewable share of total final energy
-      consumption (SPC SDG Data Explorer). Guess before you check.
+      Before you scroll on: what share of Palau's electricity do you think comes from renewables? Take a guess.
     </span>
     <GuessSlider
       answerValue={renewableShareValue}
       answerYear={renewableShareYear}
     />
+    <span slot="citation">
+      Source: <a href="https://stats.pacificdata.org/vis?fs[0]=Development%20indicators,0%7CSustainable%20Development%20Goals%23SDG%23&pg=0&fc=Development%20indicators&bp=true&snb=18&df[ds]=ds%3ASPC2&df[id]=DF_SDG&df[ag]=SPC&df[vs]=3.0&dq=A.EG_FEC_RNEW.._T._T._T._T._T._T._Z._T&pd=,&to[TIME_PERIOD]=false" target="_blank" rel="noopener">SPC Pacific Data Hub, SDG Indicators — renewable share of total final energy consumption (EG_FEC_RNEW)</a>
+    </span>
   </Section>
 
   <Section
-    eyebrow="Change over time"
-    title="GHG emissions per capita, Pacific Island countries & territories"
+    eyebrow="A Pacific Outlier"
+    title="GHG Emissions Per Capita"
   >
     <span slot="deck">
       17 territories, 1970&ndash;2024 (SPC Climate Change Indicators). The four
@@ -94,14 +104,12 @@ That grid still runs largely on fuel arriving by tanker, and the visitors drawn 
       muted — hover any line, featured or not, to trace its country and value.
     </span>
     <LineChart data={lineData} />
+    <span slot="citation">
+      Source: <a href="https://stats.pacificdata.org/vis?lc=en&df[ds]=SPC2&df[id]=DF_CLIMATE_CHANGE&df[ag]=SPC&df[vs]=1.0&av=true&dq=A.GHG_EMI_CAPITA.&pd=,&to[TIME_PERIOD]=false" target="_blank" rel="noopener">SPC Pacific Data Hub, Climate Change Indicators — GHG emissions per capita (GHG_EMI_CAPITA)</a>
+    </span>
   </Section>
 
-  <TextPlaceholder eyebrow="Example">
-    Placeholder text — replace with copy on how Palau can serve as an example
-    for efficient and effective change.
-  </TextPlaceholder>
-
-  <Section eyebrow="Countdown" title="Palau's path off fossil fuels">
+  <Section eyebrow="Countdown" title="Palau's Path Off Fossil Fuels">
     <span slot="deck">
       Non-renewable energy consumption, 2000&ndash;2050, in terajoules. Each
       ring is one year — 2000 draws a nearly full circle of fossil
@@ -110,6 +118,10 @@ That grid still runs largely on fuel arriving by tanker, and the visitors drawn 
       target collapses to a single point.
     </span>
     <TransitionRings data={renewableTransitionData} totalTFEC_TJ={assumedTotalTFEC_TJ} />
+    <span slot="citation">
+      Source: <a href="https://stats.pacificdata.org/vis?fs[0]=Development%20indicators,0%7CSustainable%20Development%20Goals%23SDG%23&pg=0&fc=Development%20indicators&bp=true&snb=18&df[ds]=ds%3ASPC2&df[id]=DF_SDG&df[ag]=SPC&df[vs]=3.0&dq=A.EG_FEC_RNEW.._T._T._T._T._T._T._Z._T&pd=,&to[TIME_PERIOD]=false" target="_blank" rel="noopener">SPC Pacific Data Hub, SDG Indicators — renewable share of total final energy consumption (EG_FEC_RNEW)</a>;
+      <a href="https://www.irena.org/-/media/Files/IRENA/Agency/Publication/2022/Jun/IRENA_Palau_RE_Roadmap_2022.pdf" target="_blank" rel="noopener">IRENA, Palau Renewable Energy Roadmap (2022)</a>
+    </span>
   </Section>
 
   <TextPlaceholder eyebrow="A future beacon of environmentally friendly travel">
