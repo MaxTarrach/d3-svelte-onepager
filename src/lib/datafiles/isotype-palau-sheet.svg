@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 900 620" width="900" height="620" role="img" aria-labelledby="t d">
+  <title id="t">Isotype specimen sheet: Palau residents and visitors</title>
+  <desc id="d">Two pictograms built on the same grid — a resident and a snorkelling visitor — plus an example chart row.</desc>
+
+  <defs>
+    <!-- Both symbols share one grid: 120 x 200, baseline at y = 196 -->
+    <g id="fig-resident">
+      <path d="M44 48V28a16 16 0 0 1 32 0v20Z"/>
+      <path d="M54 44h12v16H54Z"/>
+      <path d="M40 58h40a8 8 0 0 1 8 8v6H32v-6a8 8 0 0 1 8-8Z"/>
+      <path d="M46 72h28v60H46Z"/>
+      <path d="M32 72h11v46.5a5.5 5.5 0 0 1-11 0Z"/>
+      <path d="M77 72h11v46.5a5.5 5.5 0 0 1-11 0Z"/>
+      <path d="M46 126h28v70H62.5v-56a2.5 2.5 0 0 0-5 0v56H46Z"/>
+    </g>
+
+    <g id="fig-tourist">
+      <path fill-rule="evenodd" d="M44 48V28a16 16 0 0 1 32 0v20Z
+                                   M50 24h20a3 3 0 0 1 3 3v6a3 3 0 0 1-3 3H50a3 3 0 0 1-3-3v-6a3 3 0 0 1 3-3Z"/>
+      <path d="M79 34V16a3 3 0 0 1 6 0v24H74v-6Z"/>
+      <path d="M54 44h12v16H54Z"/>
+      <path d="M40 58h40a8 8 0 0 1 8 8v6H32v-6a8 8 0 0 1 8-8Z"/>
+      <path d="M46 72h28v60H46Z"/>
+      <path d="M32 72h11v46.5a5.5 5.5 0 0 1-11 0Z"/>
+      <path d="M77 72h11v46.5a5.5 5.5 0 0 1-11 0Z"/>
+      <path d="M46 126h28v58H62.5v-44a2.5 2.5 0 0 0-5 0v44H46Z"/>
+      <path d="M57.5 182v14H32a6 6 0 0 1 0-12L57.5 182Z"/>
+      <path d="M62.5 182v14H88a6 6 0 0 0 0-12L62.5 182Z"/>
+    </g>
+  </defs>
+
+  <g font-family="Futura, 'Century Gothic', Helvetica, Arial, sans-serif" fill="#1D1D1B">
+    <text x="60" y="52" font-size="26" letter-spacing="1.5">PALAU — RESIDENTS AND VISITORS</text>
+    <text x="60" y="76" font-size="13" letter-spacing="0.6" fill="#6B6B66">Pictograms in the tradition of Otto and Marie Neurath / Gerd Arntz</text>
+
+    <!-- specimens -->
+    <use xlink:href="#fig-resident" href="#fig-resident" transform="translate(60,110)" fill="#1D1D1B"/>
+    <use xlink:href="#fig-tourist"  href="#fig-tourist"  transform="translate(240,110)" fill="#0E7C86"/>
+
+    <text x="60"  y="338" font-size="13" letter-spacing="0.8">RESIDENT</text>
+    <text x="240" y="338" font-size="13" letter-spacing="0.8" fill="#0E7C86">VISITOR</text>
+    <text x="440" y="150" font-size="13" fill="#6B6B66">Same body, same height, same baseline.</text>
+    <text x="440" y="172" font-size="13" fill="#6B6B66">The visitor differs only by three attributes:</text>
+    <text x="440" y="194" font-size="13" fill="#6B6B66">mask, snorkel, fins.</text>
+    <text x="440" y="230" font-size="13" fill="#6B6B66">More people = more symbols, never a bigger symbol.</text>
+
+    <path d="M60 372h780" fill="none" stroke="#1D1D1B" stroke-width="1.5"/>
+
+    <!-- example chart -->
+    <text x="60" y="400" font-size="12" letter-spacing="0.8" fill="#6B6B66">EXAMPLE ARRANGEMENT — REPLACE THE COUNTS WITH YOUR OWN DATA</text>
+
+    <text x="60" y="432" font-size="13" letter-spacing="0.8">RESIDENTS</text>
+    <g fill="#1D1D1B">
+      <use xlink:href="#fig-resident" href="#fig-resident" transform="translate(60,440) scale(0.35)"/>
+      <use xlink:href="#fig-resident" href="#fig-resident" transform="translate(108,440) scale(0.35)"/>
+      <use xlink:href="#fig-resident" href="#fig-resident" transform="translate(156,440) scale(0.35)"/>
+      <use xlink:href="#fig-resident" href="#fig-resident" transform="translate(204,440) scale(0.35)"/>
+    </g>
+
+    <text x="60" y="522" font-size="13" letter-spacing="0.8" fill="#0E7C86">VISITORS</text>
+    <g fill="#0E7C86">
+      <use xlink:href="#fig-tourist" href="#fig-tourist" transform="translate(60,530) scale(0.35)"/>
+      <use xlink:href="#fig-tourist" href="#fig-tourist" transform="translate(108,530) scale(0.35)"/>
+      <use xlink:href="#fig-tourist" href="#fig-tourist" transform="translate(156,530) scale(0.35)"/>
+      <use xlink:href="#fig-tourist" href="#fig-tourist" transform="translate(204,530) scale(0.35)"/>
+      <use xlink:href="#fig-tourist" href="#fig-tourist" transform="translate(252,530) scale(0.35)"/>
+      <use xlink:href="#fig-tourist" href="#fig-tourist" transform="translate(300,530) scale(0.35)"/>
+      <use xlink:href="#fig-tourist" href="#fig-tourist" transform="translate(348,530) scale(0.35)"/>
+      <use xlink:href="#fig-tourist" href="#fig-tourist" transform="translate(396,530) scale(0.35)"/>
+      <use xlink:href="#fig-tourist" href="#fig-tourist" transform="translate(444,530) scale(0.35)"/>
+      <use xlink:href="#fig-tourist" href="#fig-tourist" transform="translate(492,530) scale(0.35)"/>
+      <use xlink:href="#fig-tourist" href="#fig-tourist" transform="translate(540,530) scale(0.35)"/>
+      <use xlink:href="#fig-tourist" href="#fig-tourist" transform="translate(588,530) scale(0.35)"/>
+    </g>
+
+    <text x="60" y="612" font-size="12" letter-spacing="0.6" fill="#6B6B66">1 symbol = 1,000 people</text>
+  </g>
+</svg>

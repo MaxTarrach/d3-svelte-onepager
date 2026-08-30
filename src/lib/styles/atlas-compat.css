@@ -1,0 +1,30 @@
+/* ==========================================================================
+   atlas-compat.css
+   Maps the variable names your components already use onto the atlas tokens.
+   Import AFTER atlas-tokens.css. Restyles every existing chart with no
+   component edits — useful as step one, then retire it as you convert files.
+   ========================================================================== */
+
+:root {
+  /* Series — --series-1 is the subject of the figure, so it gets the magenta.
+     Add more only as far as you actually need; the ramp stays neutral. */
+  --series-1: var(--magenta);
+  --series-2: var(--s-600);
+  --series-3: var(--s-400);
+  --series-4: var(--s-300);
+  --series-5: var(--s-200);
+
+  /* Surfaces */
+  --surface-1: var(--field);
+  --surface-2: var(--paper);
+
+  /* Text */
+  --text-primary:   var(--ink);
+  --text-secondary: var(--ink-muted);
+  --text-muted:     var(--s-600);
+
+  /* Lines */
+  --gridline:    var(--stroke-grid);
+  --baseline:    var(--stroke-axis);
+  --border-ring: var(--stroke-hairline);
+}

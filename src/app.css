@@ -1,0 +1,16 @@
+/*
+  Page-level reset. All design tokens live in lib/styles/atlas-tokens.css
+  and atlas-compat.css (imported before this file) — this stays intentionally
+  thin.
+*/
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#app {
+  min-height: 100vh;
+}
