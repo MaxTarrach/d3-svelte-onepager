@@ -1,4 +1,5 @@
 <script>
+  import { onMount } from "svelte";
   import Section from "./lib/Section.svelte";
   import TextPlaceholder from "./lib/TextPlaceholder.svelte";
   import HeroImage from "./lib/HeroImage.svelte";
@@ -21,7 +22,26 @@
     renewableTransitionData,
     assumedTotalTFEC_TJ,
   } from "./lib/data.js";
+
+  let progress = 0;
+
+  function updateProgress() {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    progress = scrollable > 0 ? (window.scrollY / scrollable) * 100 : 0;
+  }
+
+  onMount(() => {
+    updateProgress();
+    window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
+    return () => {
+      window.removeEventListener("scroll", updateProgress);
+      window.removeEventListener("resize", updateProgress);
+    };
+  });
 </script>
+
+<div class="progress-bar" style="width: {progress}%" role="presentation" />
 
 <header class="page-header">
   <div class="header-inner">
@@ -107,10 +127,10 @@ That grid still runs largely on fuel arriving by tanker, and the visitors drawn 
     </span>
   </Section>
 
-  <Section eyebrow="Countdown" title="Palau's Path Off Fossil Fuels">
+  <Section eyebrow="Future Projection" title="Palau's Path Off Fossil Fuels">
     <span slot="deck">
       Non-renewable energy consumption, 2000&ndash;2050, in terajoules. Each
-      ring is one year — 2000 draws a nearly full circle of fossil
+      ring is one year: 2000 draws a nearly full circle of fossil
       dependence, and every later year paints a smaller disc over it, so the
       shrinking band is the actual ground still to cover before the 2045
       target collapses to a single point.
@@ -136,6 +156,15 @@ That legibility is the export. Palau has already been early on things the rest o
 </main>
 
 <style>
+  .progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: var(--magenta);
+    z-index: 20;
+  }
+
   .page-header {
     position: sticky;
     top: 0;
