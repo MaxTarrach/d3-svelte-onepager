@@ -19,12 +19,6 @@
   const GAP_Y = 4;
 </script>
 
-<p class="caption">
-  Two pictograms built on the same grid — a resident and a snorkelling
-  visitor. Every figure below is drawn at this same fixed size; a market's
-  weight is read only by counting figures, {fmt(unit)} people each, never by
-  a figure changing size.
-</p>
 
 <svg width="0" height="0" aria-hidden="true" focusable="false">
   <defs>
@@ -88,11 +82,6 @@
     <span class="key-label key-label-tourist">Visitor</span>
   </div>
 
-  <ul class="key-notes">
-    <li>Same body, same height, same baseline.</li>
-    <li>The visitor differs by three added attributes: mask, snorkel, fins.</li>
-    <li>More people = more symbols, never a bigger symbol.</li>
-  </ul>
 </div>
 
 <div class="divider" role="separator" />
