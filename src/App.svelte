@@ -34,8 +34,10 @@
     <HeroImage />
   </div>
 
-  <TextPlaceholder eyebrow="Intro">
-    Placeholder text — replace with the real intro copy.
+  <TextPlaceholder eyebrow="Many reasons to travel to Palau">
+    Palau is roughly the size of New York City, scattered across 340 islands, and home to fewer than 20,000 people. It is also one of the most photographed places on Earth. The limestone domes of the Rock Islands, the sheer drop of the Blue Corner reef wall, the stingless jellyfish that swarm a landlocked marine lake; these images travel far better than the country's own electricity grid does.
+
+That grid still runs largely on fuel arriving by tanker, and the visitors drawn by Palau's environmental reputation are the ones drawing hardest on it. Air-conditioned rooms, desalinated water, and dive boat compressors all trace back to the same imported barrel. As arrivals climb back toward pre-pandemic levels, this piece looks at where Palau stands today: how much energy tourism consumes, where it comes from, and how far the country still is from the sustainability it sells.
   </TextPlaceholder>
 
   <Section eyebrow="Composition" title="Traffic by channel">
@@ -47,24 +49,18 @@
   </Section>
 
   <Section
-    eyebrow="Flow"
-    title="Visitor arrivals into Palau by source market, CY2015"
+    eyebrow="Origins of tourists"
+    title="East Asia Drives Palau's Island Tourism"
   >
     <span slot="deck">
-      Seven source markets from the Palau Visitor Information Program's
-      "Visitor arrivals by Country Group" table, each routed to Palau along
-      its great-circle path and animated to show relative traffic.
+      Palau's tourism is an East Asian story. China, Japan, Taiwan and South Korea account for roughly nine in ten arrivals, with China alone supplying more than half. Everything else is small by comparison: the US and Canada together, then Europe, then Australia at under 1%. A visitor economy resting this heavily on one source market inherits that market's politics, currency and flight schedules and so does Palau's grid.
     </span>
     <MovementMap data={movementData} destination={palau} />
   </Section>
 
-  <Section eyebrow="Scale" title="Palau residents against visiting tourists">
+  <Section eyebrow="Comparison" title="A Pristine Paradise Where Tourists Outnumber The Remaning Locals">
     <span slot="deck">
-      A pictogram specimen sheet, after Otto and Marie Neurath / Gerd
-      Arntz's Isotype method: a resident and a snorkelling visitor share
-      one grid, one baseline, one body — the visitor differs by only three
-      added attributes. Every figure below is drawn at a single fixed
-      size; magnitude comes only from how many are drawn.
+      Seventeen figures stand for everyone who lives in Palau. A hundred and sixty stand for the people who arrived in a single year. The two symbols are deliberately the same height, on the same baseline, differing only by a mask, a snorkel and a pair of fins, because a visitor is not a smaller or larger kind of person, only a temporary one. What changes is the count. Nine visitors for every resident, all drawing on the same reefs, the same water, the same imported fuel.
     </span>
     <IsotypeChart
       residentTotal={isotypeResidentPopulation}
@@ -116,8 +112,10 @@
     <TransitionRings data={renewableTransitionData} totalTFEC_TJ={assumedTotalTFEC_TJ} />
   </Section>
 
-  <TextPlaceholder eyebrow="Outro">
-    Placeholder text — replace with the real outro copy.
+  <TextPlaceholder eyebrow="A future beacon of environmentally friendly travel">
+    What makes Palau worth watching is not that it has solved this. It hasn't. The gap between the pledge stamped into every visitor's passport and the diesel burning behind every hotel lobby is still wide. But Palau is running the experiment at a scale where the results are visible. A country of fewer than 20,000 people can see exactly what a new solar array does to its fuel bill, exactly what an extra ten thousand visitors do to its grid. Larger nations lose those numbers in the noise.
+
+That legibility is the export. Palau has already been early on things the rest of the world arrived at later: the marine sanctuary, the sunscreen ban, the visitor pledge. Its energy transition is now the harder version of the same test, because it asks whether a place can keep selling its own beauty without consuming it. If Palau finds the answer, it will not be because the problem was small there. It will be because it was impossible to ignore.
   </TextPlaceholder>
 
   <footer class="page-footer">

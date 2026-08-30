@@ -92,19 +92,6 @@
   $: hoveredRing = hovered !== null ? data.find((d) => d.year === hovered) : null;
 </script>
 
-<p class="caption">
-  Each disc is one year's non-renewable energy consumption, in terajoules —
-  2000 draws nearly the full circle, and every later year paints a smaller
-  disc on top, so what's left visible is literally the ground still to
-  cover. 2000&ndash;2021 are measured readings; 2025 onward follow Palau's
-  own NDC and Energy Roadmap targets, marked with a dashed edge. Palau
-  publishes these targets only as a renewable <em>share</em>, so every
-  year's absolute figure is modeled by applying that year's measured or
-  targeted share to a fixed ~{Math.round(totalTFEC_TJ)} TJ total-consumption
-  baseline (the average of IRENA's 2017 and 2022 measured totals) — an
-  estimate, not a per-year measurement.
-</p>
-
 <div class="chart" bind:clientWidth={width}>
   <svg
     {width}

@@ -152,14 +152,6 @@
   $: hoveredArc = arcs.find((a) => a.id === hovered) ?? null;
 </script>
 
-<p class="caption">
-  Each arc is one source market's great-circle route into Palau; width, fill
-  depth, and traveling-dot count all scale with CY2015 arrivals from that
-  market — heavier routes carry more, faster dots. "Others", the CSV's
-  catch-all for smaller markets, and the "Total" row aren't real places, so
-  they're excluded from the map (kept in the table below).
-</p>
-
 <div class="chart" bind:clientWidth={width}>
   <svg
     {width}
