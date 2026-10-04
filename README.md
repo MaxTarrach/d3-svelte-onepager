@@ -1,5 +1,8 @@
 # Overtourism in Palau – From Dependence to Future Pioneer
 
+<img width="568" height="609" alt="Screenshot 2026-10-04 at 14 01 50" src="https://github.com/user-attachments/assets/de0d93a9-ea22-4d1f-8dda-59a658d7367f" />
+
+
 **Live site:** https://maxtarrach.github.io/d3-svelte-onepager/
 
 A scrolling, single-page data story about Palau, a Pacific island nation that lives from the very visitors whose footprint threatens what they come to see.
